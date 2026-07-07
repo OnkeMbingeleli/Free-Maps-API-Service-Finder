@@ -1,11 +1,25 @@
 {
   "name": "service-finder-frontend",
   "version": "1.0.0",
-  "private": true,
   "type": "module",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "node --watch src/index.js",
-    "test": "echo \"No frontend tests yet\""
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "@supabase/supabase-js": "^2.45.0",
+    "@react-google-maps/api": "^2.19.3"
+  },
+  "devDependencies": {
+    "vite": "^5.4.8",
+    "@vitejs/plugin-react": "^4.3.2",
+    "vite-plugin-pwa": "^0.20.5",
+    "vitest": "^2.1.1",
+    "@testing-library/react": "^16.0.1"
   }
 }
