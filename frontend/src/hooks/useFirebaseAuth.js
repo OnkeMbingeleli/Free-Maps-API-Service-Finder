@@ -2,10 +2,8 @@ import { useEffect, useState } from 'react';
 import {
   createUserWithEmailAndPassword,
   firebaseAuth,
-  googleProvider,
   onAuthStateChanged,
   signInWithEmailAndPassword,
-  signInWithPopup,
   signOut,
 } from '../config/firebase';
 
@@ -22,7 +20,6 @@ export function useFirebaseAuth() {
     return unsubscribe;
   }, []);
 
-  const authSignInWithGoogle = () => signInWithPopup(firebaseAuth, googleProvider);
   const authSignInWithEmail = (email, password) => signInWithEmailAndPassword(firebaseAuth, email, password);
   const authCreateAccountWithEmail = (email, password) => createUserWithEmailAndPassword(firebaseAuth, email, password);
   const authSignOut = () => signOut(firebaseAuth);
@@ -30,7 +27,6 @@ export function useFirebaseAuth() {
   return {
     user,
     loading,
-    authSignInWithGoogle,
     authSignInWithEmail,
     authCreateAccountWithEmail,
     authSignOut,

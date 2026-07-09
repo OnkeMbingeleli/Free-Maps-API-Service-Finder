@@ -1,12 +1,12 @@
-# Service Finder (Free Maps API — Super App Edition)
+# Service Finder (Free Maps API — Service Finder)
 
-Monorepo for the LC Studio Service Finder project. Google Maps API is the
-required, single map provider. See `docs/BLUEPRINT.md` for the full architecture,
-team structure, Supabase schema, and Git workflow.
+Monorepo for the LC Studio Service Finder project. The frontend uses Leaflet,
+OpenStreetMap, Nominatim search, and Waze deep links, with Firestore for service
+suggestions. See `docs/BLUEPRINT.md` for the full architecture and workflow.
 
 ## Folders
-- `frontend/` — React + Vite PWA (offline-first, Google Maps, chat, admin UI)
-- `backend/` — Express + Supabase (auth, integrations, scheduled jobs)
+- `frontend/` — React + Vite PWA (Leaflet map, search/filter, Firestore suggestions)
+- `backend/` — Express API (approved services, suggestion review, scheduled jobs)
 - `docs/` — blueprint, git workflow, onboarding
 - `.github/workflows/` — CI pipelines
 

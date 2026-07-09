@@ -11,4 +11,5 @@ export const config = {
   govStatsSources: (process.env.GOV_STATS_SOURCES || '').split(',').filter(Boolean),
   slackWebhookUrl: process.env.SLACK_WEBHOOK_URL,
   alertEmailTo: process.env.ALERT_EMAIL_TO,
+  hereApiKey: process.env.HERE_API_KEY,
 };
